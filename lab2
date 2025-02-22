@@ -1,0 +1,79 @@
+class Animal:
+    def __init__(self, name, gender, age, species):
+        self.name = name
+        self.gender = gender
+        self.age = age
+        self.species = species
+
+    def eat(self, food):
+        print(f"{self.name} поел {self.food}")
+
+    def move(self, location):
+        print(f"{self.name} пошел гулять {self.location}")
+
+    def sleep(self):
+        print(f"{self.name} спит")
+
+class Mammals(Animal):
+    def __init__(self, name, gender, age, species, leight_hair, color_hair):
+        self.leight_hair = leight_hair
+        self.color_hair = color_hair
+        super().__init__(name, gender, age, species)
+
+    def feed(self, baby):
+        print(f"{self.name} покормила своего детеныша {self.baby}")
+
+class Bird(Animal):
+    def __init__(self, size_beak, wingspan):
+        self.size_beak = size_beak
+        self.wingspan = wingspan
+
+    def fly(self):
+        print(f"{self.name} улетел")
+
+    def home(self):
+        print(f"{self.name} вьёт гнездо")
+
+    def egg(self):
+        print(f"птица {self.name} снесла яйцо")
+
+class Dog(Mammals):   
+    def run(self):
+        print(f"Собака {self.name} побежала за мячом")
+
+    def voice(self):
+        print("WOOF")
+
+test = Dog("j", "s", 13, "d", 5, "black")
+test.run()
+test.voice()
+test.sleep()
+
+#Задание 2
+
+class Charapter:
+    def __init__(self, name):
+        self.name = name
+
+class Warrior(Charapter):
+    def sword(self):
+        print(f"{self.name} фехтование")
+
+class Mage(Charapter):
+    def staff(self, ability):
+        print(f"{self.ability}")
+
+class Rogue(Charapter):
+    def theft(self):
+        print(f"{self.name} украл деньги")
+
+class Paladin(Charapter):
+    def hammer(self):
+        print(f"{self.name} швырнул молот")
+
+class Enemy:
+    def __init__(self, name):
+        self.name = name
+
+class Goblin(Enemy):
+    def 
